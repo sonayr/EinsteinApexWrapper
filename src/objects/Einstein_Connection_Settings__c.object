@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Settings used to connect to the Einstein API</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Chosen_Model_Id__c</fullName>
+        <description>Id of the model which is desired to be used for real time predictions</description>
+        <externalId>false</externalId>
+        <label>Chosen Model Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email__c</fullName>
+        <description>Email Address you signed up for Einstein with</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Email Address you signed up for Einstein with</inlineHelpText>
+        <label>Email</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FileName__c</fullName>
+        <description>The name of the Einstein file uploaded into this salesforce org. Note it has to be the name it is in Salesforce in case you renamed it.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The name of the Einstein file uploaded into this salesforce org. Note it has to be the name it is in Salesforce in case you renamed it.</inlineHelpText>
+        <label>FileName</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Organization_Type__c</fullName>
+        <defaultValue>&apos;developer.force.com&apos;</defaultValue>
+        <description>The url for the type of salesforce org this is</description>
+        <externalId>false</externalId>
+        <inlineHelpText>1.https://.salesforce.com (Production)
+2.developer.force.com (Developer)
+2.https://test.salesforce.com (Sandbox)
+3.https://[MyDomain URL] (Community/MyDomain)</inlineHelpText>
+        <label>Organization Type</label>
+        <length>75</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Token_Expiry__c</fullName>
+        <defaultValue>3600</defaultValue>
+        <description>Length in seconds for how long token should remain alive</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Length in seconds for how long token should remain alive</inlineHelpText>
+        <label>Token Expiry</label>
+        <precision>5</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Using_JWT_Certificate__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>If you are used a Salesforce Certificate to signup for Einstein check this option, otherwise upload the file with key and leave this unchecked</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If you are used a Salesforce Certificate to signup for Einstein check this option, otherwise upload the file with key and leave this unchecked</inlineHelpText>
+        <label>Using JWT Certificate</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Einstein Connection Settings</label>
+    <visibility>Public</visibility>
+</CustomObject>
